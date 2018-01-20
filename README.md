@@ -2,7 +2,7 @@
 The implementation is pretty basic, it needs to be a little adjusted to be used in conjunction with groups having different goals.
 That's a trivial task so I've left it out to keep the implementation lighter. However, you can spawn multiple actors with a common goal by simply using the provided 'Group' class.
 
-See the implementation in action (including some visuals for debugging which I've left out in this implementation): 
+See the implementation in action
 https://www.youtube.com/watch?v=jLjaN6ps3BA
 
 
