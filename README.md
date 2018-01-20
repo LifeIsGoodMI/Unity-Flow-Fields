@@ -6,11 +6,6 @@ See the implementation in action (including some visuals for debugging which I'v
 https://www.youtube.com/watch?v=jLjaN6ps3BA
 
 
-
-[![Flow Fields v0.1](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/jLjaN6ps3BA "Flow Fields v0.1")
-
-
-
 **Instructions**
 1) Set up a prefab for an Actor, throw the 'Actor' component on top of it.
 2) Add the 'FlowFieldsMaster' component to a Game Object in your scene. Assign the actor prefab.
