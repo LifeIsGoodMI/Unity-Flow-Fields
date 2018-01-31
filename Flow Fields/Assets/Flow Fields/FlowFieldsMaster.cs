@@ -64,7 +64,7 @@ public class FlowFieldsMaster : MonoBehaviour
             var actor = group.actors[i];
             var pos = actor.position;
 
-            var cell = grid.GetClosestCell(actor.position);
+            var cell = grid.FindCellByPosition(actor.position);
             actor.direction = (cell != null) ? cell.direction : Vector2.zero;
         }
     }
