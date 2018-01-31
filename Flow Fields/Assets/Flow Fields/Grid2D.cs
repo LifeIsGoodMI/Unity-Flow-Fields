@@ -148,57 +148,7 @@ public class Grid2D
 
         return null;
     }
-
-    public Cell GetClosestCell(Vector2 pos)
-    {
-        if (!IsInBounds(pos))
-            return null;
-
-        Cell result;
-
-        var candidates = new Vector2[5];
-        candidates[0] = new Vector2(Mathf.Floor(pos.x), Mathf.Floor(pos.y));
-        candidates[1] = new Vector2(Mathf.Floor(pos.x), Mathf.Ceil(pos.y));
-        candidates[2] = new Vector2(Mathf.Ceil(pos.x), Mathf.Ceil(pos.y));
-        candidates[3] = new Vector2(Mathf.Ceil(pos.x), Mathf.Floor(pos.y));
-        candidates[4] = new Vector2(Mathf.Floor(pos.x), Mathf.Floor(pos.y));
-
-        float smallestDist = Mathf.Infinity;
-        Vector2 endPos = candidates[0];
-        for (int i = 0; i < 4; i++)
-        {
-            if (!IsInBounds(candidates[i]))
-                continue;
-
-            float dist = Vector2.Distance(candidates[i], pos);
-            if (dist < smallestDist)
-            {
-                smallestDist = dist;
-                endPos = candidates[i];
-            }
-        }
-
-        result = FindCellByPosition(endPos);
-        return result;
-    }
-
-    public bool IsInBounds(Vector2 pos)
-    {
-        int x = (int)pos.x;
-        int y = (int)pos.y;
-
-        if (x < 0)
-            return false;
-        if (x >= width)
-            return false;
-
-        if (y < 0)
-            return false;
-        if (y >= length)
-            return false;
-
-        return true;
-    }
+    
 
     #region Debug
     public static void DrawGrid(int width, int length, Grid2D grid, Material mat)
